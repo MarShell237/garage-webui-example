@@ -1,0 +1,12 @@
+services:
+  webui:
+    image: khairul169/garage-webui:latest
+    container_name: garage-webui
+    restart: unless-stopped
+    volumes:
+      - ./garage.toml:/etc/garage.toml:ro
+    ports:
+      - 3909:3909
+    environment:
+      API_BASE_URL: ""     
+      S3_ENDPOINT_URL: ""
