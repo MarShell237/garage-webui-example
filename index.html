@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Storage | Test Déploiement</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: rgba(23, 28, 36, 0.8);
+            --accent: #3fb950;
+            --text: #c9d1d9;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            background: var(--card);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            text-align: center;
+            max-width: 400px;
+            animation: fadeIn 0.8s ease-out;
+        }
+        h1 { color: var(--accent); font-size: 1.5rem; margin-bottom: 0.5rem; }
+        p { font-size: 0.9rem; line-height: 1.6; opacity: 0.8; }
+        .status {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(63, 185, 80, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .details {
+            margin-top: 1.5rem;
+            font-family: "SFMono-Regular", Consolas, monospace;
+            font-size: 0.75rem;
+            background: #010409;
+            padding: 0.8rem;
+            border-radius: 6px;
+            text-align: left;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Garage S3</h1>
+        <p>Le mode <strong>Website</strong> est correctement configuré sur ce bucket.</p>
+        <div class="status">● Bucket Public</div>
+        <div class="details">
+            <span style="color: #7d8590;">// Info Déploiement</span><br>
+            <span style="color: #ff7b72;">Service:</span> Garage v2.0.0<br>
+            <span style="color: #ff7b72;">Status:</span> 200 OK
+        </div>
+    </div>
+</body>
+</html>
